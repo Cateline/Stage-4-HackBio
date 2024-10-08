@@ -12,7 +12,8 @@ Using wget, I retrieved the forward and reverse reads from the provided URLs. Fo
 
 Forward Strand:
 
-![](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image002.png)
+![image](https://github.com/user-attachments/assets/3b900814-48f2-4204-91da-39526e52eada)
+
 
 The quality metrics in the forward strand were within acceptable ranges showing that the raw reads were of high quality. There was a warning regarding the per sequence GC content indicating that the GC content distribution deviated from the expected range for the organism being studied.
 
@@ -24,9 +25,12 @@ Reverse Strand:
 
 The reverse strand passed all the quality metrics except for the per base sequence content. The nucleotide distribution across the bases was not as expected, particularly at the start.
 
-![](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image006.png)
+![image](https://github.com/user-attachments/assets/2e6bf849-1a27-4893-a04d-7f8aff0bfddd)
 
-To address these issues, I used FastP to trim low-quality bases and remove adapter sequences from the raw reads. The average read length was 151 base pairs (bp) for both forward and reverse reads. After trimming, the average read length decreased slightly to 150 bp.  Duplicate reads present in the data were at about 11.67%. About 89.05% of the reads passed the filtering criteria, which is a good retention rate. The report also mentions a low adapter percentage (~0.096%), suggesting that there was minimal contamination from adapters
+To address these issues, I used FastP to trim low-quality bases and remove adapter sequences from the raw reads. The average read length was 151 base pairs (bp) for both forward and reverse reads. After trimming, the average read length decreased slightly to 150 bp.  Duplicate reads present in the data were at about 11.67%. About 89.05% of the reads passed the filtering criteria, which is a good retention rate. The report also mentions a low adapter percentage (~0.096%), suggesting that there was minimal contamination from adapters.
+
+![image](https://github.com/user-attachments/assets/becb5a78-6e78-4432-84a8-f5249add8a81)
+
 
 This step improved the overall quality of the reads and also prepared them for more accurate mapping to the reference genome. Next, I proceeded with genome mapping. I downloaded and indexed the reference genome using BWA, a tool for aligning sequencing reads to a reference genome. I then used BWA-MEM to map the trimmed reads to the reference, resulting in an alignment file (SAM format). This file was converted to BAM format and sorted using SAMtools for easier handling in downstream analyses.
 
