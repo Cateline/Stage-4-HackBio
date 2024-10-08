@@ -20,12 +20,12 @@ The quality metrics in the forward strand were within acceptable ranges showing 
 Additionally, the per base sequence quality was flagged as a fail because some bases did not fall within the high-quality "green zone" on the FastQC report, particularly at the start and towards the ends of the reads. The per base sequence content was also flagged as a fail, indicating that the nucleotide distribution across the reads was not as balanced as expected. Ideally, the proportion of each nucleotide (A, T, G, C) should remain fairly consistent across the length of the reads. However, the FastQC report revealed noticeable imbalances, particularly at the start of the reads, which can be a sign of the presence of adapter sequences.
 
 Reverse Strand:
-
-![](file:///C:/Users/ADMINI~1/AppData/Local/Temp/msohtmlclip1/01/clip_image004.png)
+![image](https://github.com/user-attachments/assets/4c93889c-29d0-4515-a855-259065d7ae0e)
 
 The reverse strand passed all the quality metrics except for the per base sequence content. The nucleotide distribution across the bases was not as expected, particularly at the start.
 
-![image](https://github.com/user-attachments/assets/2e6bf849-1a27-4893-a04d-7f8aff0bfddd)
+![image](https://github.com/user-attachments/assets/540a1a3a-5c9e-41f3-962d-d412b2244986)
+
 
 To address these issues, I used FastP to trim low-quality bases and remove adapter sequences from the raw reads. The average read length was 151 base pairs (bp) for both forward and reverse reads. After trimming, the average read length decreased slightly to 150 bp.  Duplicate reads present in the data were at about 11.67%. About 89.05% of the reads passed the filtering criteria, which is a good retention rate. The report also mentions a low adapter percentage (~0.096%), suggesting that there was minimal contamination from adapters.
 
