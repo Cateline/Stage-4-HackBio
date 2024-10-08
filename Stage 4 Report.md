@@ -4,7 +4,7 @@
 
 **Simple NGS Analysis**: https://github.com/Cateline/Stage-4-HackBio/blob/main/Simple%20NGS%20Analysis/NGS%20Bash%20Script
 
-**Pipeline**: https://github.com/Cateline/Stage-4-HackBio/blob/main/Cate/pipeline.sh
+**Pipeline**: https://github.com/Cateline/Stage-4-HackBio/blob/main/Pipeline/pipeline.sh
 
 In this project, I began by performing a simple next-generation sequencing (NGS) analysis using a bioinformatics pipeline to process raw sequencing data, assess its quality, map the reads to a reference genome, and identify genetic variants.
 
@@ -30,4 +30,4 @@ To address these issues, I used FastP to trim low-quality bases and remove adapt
 
 This step improved the overall quality of the reads and also prepared them for more accurate mapping to the reference genome. Next, I proceeded with genome mapping. I downloaded and indexed the reference genome using BWA, a tool for aligning sequencing reads to a reference genome. I then used BWA-MEM to map the trimmed reads to the reference, resulting in an alignment file (SAM format). This file was converted to BAM format and sorted using SAMtools for easier handling in downstream analyses.
 
-Finally, I performed variant calling using bcftools. The result was a VCF file containing identified variants, such as SNPs and indels. I then developed a pipeline using Bash that integrates all these steps for a larger set of data. This pipeline automates the entire workflow, from downloading raw sequencing data to quality control, trimming, genome mapping, and variant calling
+Finally, I performed variant calling using bcftools. The result was a VCF file containing identified variants, such as SNPs and indels. I then developed a pipeline using Bash that integrates all these steps for a larger set of data. This pipeline automates the entire workflow, from downloading raw sequencing data to quality control, trimming, genome mapping, and variant calling.
